@@ -4,13 +4,14 @@ import Home from "./routes/home";
 import About from "./routes/about";
 import Contact from "./routes/contact";
 import Todo from "./routes/todo";
+import TodoItems from "./components/todo-items";
 
 function App() {
   return (
     <div>
       <nav>
-        <Link to="/home">home</Link>
-        <Link to="/about">about</Link>
+        <Link to="/home">Home</Link>
+        <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/todo">Todo</Link>
         <hr />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path=":todoId" element={<TodoItems />} />
         </Routes>
       </main>
     </div>
