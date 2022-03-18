@@ -5,6 +5,7 @@ import About from "./routes/about";
 import Contact from "./routes/contact";
 import Todo from "./routes/todo";
 import TodoItems from "./components/todo-items";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/todo" element={<Todo />} />
           <Route path=":todoId" element={<TodoItems />} />
         </Routes>
+        <Layout />
       </main>
     </div>
   );
